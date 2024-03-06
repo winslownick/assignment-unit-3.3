@@ -66,11 +66,18 @@ console.log('7. Looping through supplyChanges to populate more arrays with posit
 let stretchPositives = [];
 let stretchNegatives = [];
 let stretchZeroes = [];
- for (let x of supplyChanges) {
-  
-   
- }
-
+ for (let element of supplyChanges) {
+  if(element > 0) {
+   stretchPositives.push(element) 
+  } else if(element < 0) {
+     stretchNegatives.push(element)
+  } else if (element === 0) {
+     stretchZeroes.push(element)
+  }
+}
+console.log(stretchPositives);
+console.log(stretchNegatives);
+console.log(stretchZeroes);
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
