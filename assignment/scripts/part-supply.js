@@ -66,7 +66,8 @@ console.log('7. Looping through supplyChanges to populate more arrays with posit
 let stretchPositives = [];
 let stretchNegatives = [];
 let stretchZeroes = [];
- for (let element of supplyChanges) {
+ 
+for (let element of supplyChanges) {
   if(element > 0) {
    stretchPositives.push(element) 
   } else if(element < 0) {
@@ -75,14 +76,16 @@ let stretchZeroes = [];
      stretchZeroes.push(element)
   }
 }
-console.log(stretchPositives);
-console.log(stretchNegatives);
-console.log(stretchZeroes);
+console.log('This is the stretch positive array:',  stretchPositives);
+console.log('This is the stretch negative array:', stretchNegatives);
+console.log('This is the stretch zero array:', stretchZeroes);
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
- let totalParts = 0;
+ 
+let totalParts = 0;
+
   for(let j = 0; j < supplyChanges.length; j++) {
     totalParts += supplyChanges[j];
   }
@@ -100,9 +103,11 @@ console.log('8. Looping through supplyChanges to calculate the sum:');
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
- let parts = 572;
- let boxesFilled = 0;
-  while(parts > 7) {
+ 
+let parts = 572;
+let boxesFilled = 0;
+  
+ while(parts > 7) {
    boxesFilled++;
     parts -= 7;
   }
