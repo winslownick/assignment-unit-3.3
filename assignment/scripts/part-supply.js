@@ -79,6 +79,30 @@ for (let element of supplyChanges) {
 console.log('This is the stretch positive array:',  stretchPositives);
 console.log('This is the stretch negative array:', stretchNegatives);
 console.log('This is the stretch zero array:', stretchZeroes);
+
+
+// Rewrote question 7 using a switch statement
+for ( let element of supplyChanges) {
+ switch (element) {
+  case element > 0:
+   stretchPositives.push(element)
+   break;
+  case element < 0:
+   stretchNegatives.push(element)
+   break;
+  case element === 0:
+   stretchZeroes.push(element)
+    break;
+   default:
+     console.log('This is not a valid entry.');
+  } // case ending
+ } // for of ending 
+
+console.log('This is the stretch positive array:', stretchPositives);
+console.log('This is the stretch negative array:', stretchNegatives);
+console.log('This is the stretch zero array:', stretchZeroes);
+
+
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
